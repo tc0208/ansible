@@ -2,8 +2,6 @@
 - hosts: test
   remote_user: fih
   sudo: True
-  vars:
-   logfile: /var/log/nginx/access1.log
   tasks:
   - name: ensure nginx is at the latest version
     yum: name={{ item }} state=latest
@@ -16,3 +14,10 @@
 
   - name: ensure nginx is running (and enable it at boot)
     service: name=nginx state=started enabled=yes
+
+  - name: ensure nc is at the latest version
+    yum: name={{ item }} state=latest
+    with_items:
+      - nc
+
+
