@@ -1,6 +1,8 @@
 # ansible
 fih ansible test
 
+test
+
 # need a headless account on all servers and with ssh public key
 /etc/sudoers
 fih_ci    ALL=(ALL)       NOPASSWD:ALL
